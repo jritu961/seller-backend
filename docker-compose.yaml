@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  seller-backend:
+    build: .
+    container_name: seller-backend
+    ports:
+      - "4000:4000"  # Expose port 3000 of the container to port 3000 on your host machine
+
+    networks:
+      - seller-backend
+
+networks:
+  seller-backend:
+    driver: bridge
